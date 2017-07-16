@@ -1,13 +1,58 @@
+<!DOCTYPE html>
 <html>
 	<head>
-	<title>Background-Image Test</title>
-		<style> body {
-				background-image: url(Your imgur link goes here);
-				background-size: 100%; background-origin: content;
-				background-repeat: no-repeat;
-				}
+		<audio autoplay='1' src='https://dl.dropboxusercontent.com/s/j38up4a2xfj7cgr/1.ogg?dl=0' volume='1.0'></audio>
+		<audio autoplay='2' src='https://dl.dropboxusercontent.com/s/j38up4a2xfj7cgr/2.ogg?dl=0' volume='1.0'></audio>
+		<audio autoplay='3' src='https://dl.dropboxusercontent.com/s/j38up4a2xfj7cgr/3.ogg?dl=0' volume='1.0'></audio>
+		<title>LWG GMod LoadScreen</title>
+		<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:400,800' rel='stylesheet' type='text/css'>
+		<style type="text/css">
+			body {
+				background-image: url(https://lh3.googleusercontent.com/zI0yAKI-i7r9_z-qYr49mrw7nbiDrQEU3pRx9o9qfoT6BF8DhzsX8xgnoJywph5SSlKxdXhNc10LpOqsBjsrpcW8pPtMnbZ5cHirKXixfRzqIr_309tQFSsoZ4G6G5qJ7_UbtNpGgeGulcZdDjeFJgMostRcvzxFLABSZBC1zBWcU3K06iyaqAYvGAlCDXM1IGtkBUAjXW9zkvt1yjEWAfMmzBs3C3klSU3n2cmPhukvxYK_5RtU4wOuMSxWHhAkOE4m4ZAo51yFSAd29cEPj6dJ391AD1R4o1bqMb9ZkcRhcbRISbnPWS_3vvPM9omVqRCsmq0N6E-ze7JSR8hb3QJASk_pFBE6OFYJTprWYu9kfSR_hKP4IgWkJCds2P5ZkWEG6hgHDyQ0Do4R9gz1fse9lktFwCtndME59BSLgtBKTcdx4X2qTKbb8CHa4MvSMsoW1c2YWWKQ_CRy8JVjPM8lYM9lJvFfyI57aJoGzmCXqXpqAUlhatVeCU_HKkvU5agOLNYNlgTP7yrde8Frj6IHPAaEykYdmLBnEirlPJYwTIz-Ohm5ugpfwLsHyrvEdjwD2t7ypeohwTJrBwAnWqRlbxu97V6obbdZOgo_S6AXNhmvuaB5sU46=w1679-h944-no);
+				background-size: cover;
+				font-family: Alegreya Sans, sans-serif;
+				font-size: 18pt;
+				color: #101010;
+			}
 		</style>
+		<?php
+			$communityid = $_GET[user];
+			$mapname = $_GET[mapname];
+			$authserver = bcsub( $communityid, '76561197960265728' ) & 1;
+			$authid = ( bcsub( $communityid, '7651197960265728') - $authserver ) / 2;
+			$steamid = "STEAM_0:$authserver:$authid";
+		?>
 	</head>
- <body>
- </body>
- </html>
+	<body>
+		<b class="title">LoneWolfGaming Private RP Server</b>
+		<div class="userDet">
+			<?php 
+				echo "Welcome to the server, $steamid! </br>"
+				echo "Map: $map</br>"
+				echo "Enjoy your stay." 
+			?>
+		</div>
+		<div class="content">
+			<b>Rules</b>
+			<ul>
+				<li>No prop pushing, or prop killing</li>
+				<li>No building in the Skybox</li>
+				<li>No prop spamming</li>
+				<li>No thruster or turret noises</li>
+				<li>Respect all members</li>
+				<li>No creation stealing</li>
+				<li>No asking for ranks</li>
+				<li>If you did not make it, you cannot use it</li>
+			</ul>
+			</br>
+			<b>Staff</b>
+			<ul>
+				<b>Owners</b>
+				<li>LoneWolfGaming</li>
+				<li>Onyxa Ronin</li>
+				<b>Owners</b>
+				<li>The 1st 5 PPL Who join will become staff</li>
+			</ul>
+		</div>
+	</body>
+</html>
